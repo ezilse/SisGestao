@@ -1,0 +1,21 @@
+unit uInfosMaq;
+
+interface
+
+uses
+  IdBaseComponent, IdComponent, IdIPWatch, System.SysUtils;
+
+  function getIpMaquina:String;
+
+implementation
+
+function getIpMaquina:String;
+var
+  pegaIp:TIdIPWatch;
+begin
+  pegaIp  :=  TIdIPWatch.Create(nil);
+  Result  :=  pegaIp.LocalIP;
+  FreeAndNil(pegaIp);
+end;
+
+end.

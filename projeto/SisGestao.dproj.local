@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/02/20 16:35:20.000.948,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\about.pas=</Transaction>
+    <Transaction>2022/02/20 16:35:26.000.073,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\ChildWin.pas=</Transaction>
+    <Transaction>2022/02/20 16:37:03.000.237,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\SisGestao.dproj=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\MDIAPP.dproj</Transaction>
+    <Transaction>2022/02/20 21:36:49.000.024,=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas</Transaction>
+    <Transaction>2022/02/20 21:37:30.000.116,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.dfm=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Produtos\uCadProd.dfm</Transaction>
+    <Transaction>2022/02/20 21:37:30.000.116,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Produtos\uCadProd.pas</Transaction>
+    <Transaction>2022/02/20 21:41:42.000.893,=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas</Transaction>
+    <Transaction>2022/02/20 21:42:06.000.443,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Base\uBaseForm.pas</Transaction>
+    <Transaction>2022/02/20 21:42:06.000.443,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.dfm=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Base\uBaseForm.dfm</Transaction>
+    <Transaction>2022/02/20 21:42:20.000.027,C:\Users\edeni\Documents\GitHub\SisGestao\unit\Produtos\uCadProd.pas=</Transaction>
+    <Transaction>2022/02/20 21:43:10.000.370,=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas</Transaction>
+    <Transaction>2022/02/20 21:43:21.000.522,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Produtos\uCadProd.pas</Transaction>
+    <Transaction>2022/02/20 21:43:21.000.522,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.dfm=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Produtos\uCadProd.dfm</Transaction>
+    <Transaction>2022/02/20 21:56:05.000.687,=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas</Transaction>
+    <Transaction>2022/02/20 21:56:25.000.579,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Dados\uDados.pas</Transaction>
+    <Transaction>2022/02/20 21:56:25.000.579,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.dfm=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Dados\uDados.dfm</Transaction>
+    <Transaction>2022/02/21 00:06:11.000.768,=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas</Transaction>
+    <Transaction>2022/02/21 00:07:14.000.368,C:\Users\edeni\Documents\GitHub\SisGestao\unit\Login\uLoginCode.pas=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas</Transaction>
+    <Transaction>2022/02/21 00:20:41.000.362,=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas</Transaction>
+    <Transaction>2022/02/21 00:20:56.000.086,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Login\uLoginForm.pas</Transaction>
+    <Transaction>2022/02/21 00:20:56.000.086,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.dfm=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Login\uLoginForm.dfm</Transaction>
+    <Transaction>2022/02/21 00:47:23.000.142,=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas</Transaction>
+    <Transaction>2022/02/21 00:47:47.000.545,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas=C:\Users\edeni\Documents\GitHub\SisGestao\unit\InfosMaq\uInfosMaq.pas</Transaction>
+    <Transaction>2022/02/21 01:03:55.000.478,=C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas</Transaction>
+    <Transaction>2022/02/21 01:04:29.000.486,C:\Users\edeni\Documents\GitHub\SisGestao\projeto\Unit1.pas=C:\Users\edeni\Documents\GitHub\SisGestao\unit\Geral\uGeral.pas</Transaction>
+  </Transactions>
+</BorlandProject>

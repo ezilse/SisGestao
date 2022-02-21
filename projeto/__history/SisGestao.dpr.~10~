@@ -1,0 +1,15 @@
+program SisGestao;
+
+uses
+  Forms,
+  Main in 'Main.pas' {MainForm},
+  uBaseForm in '..\unit\Base\uBaseForm.pas' {frmBase},
+  uCadProd in '..\unit\Produtos\uCadProd.pas' {frmCadProd};
+
+{$R *.RES}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.Run;
+end.

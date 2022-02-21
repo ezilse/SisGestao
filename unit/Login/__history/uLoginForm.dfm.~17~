@@ -1,0 +1,83 @@
+object frmLogin: TfrmLogin
+  Left = 0
+  Top = 0
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Login'
+  ClientHeight = 143
+  ClientWidth = 222
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnActivate = FormActivate
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbledtLogin: TLabeledEdit
+    Left = 8
+    Top = 24
+    Width = 201
+    Height = 21
+    EditLabel.Width = 25
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Login'
+    TabOrder = 0
+  end
+  object lbledtSenha: TLabeledEdit
+    Left = 8
+    Top = 64
+    Width = 201
+    Height = 21
+    EditLabel.Width = 30
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Senha'
+    PasswordChar = '*'
+    TabOrder = 1
+  end
+  object chkMostraSenha: TCheckBox
+    Left = 8
+    Top = 91
+    Width = 201
+    Height = 17
+    Caption = 'Mostrar senha'
+    TabOrder = 2
+    OnClick = chkMostraSenhaClick
+  end
+  object btnLogar: TBitBtn
+    Left = 8
+    Top = 114
+    Width = 75
+    Height = 25
+    Action = actLogin
+    Caption = 'Login'
+    TabOrder = 3
+  end
+  object btnCancelar: TBitBtn
+    Left = 89
+    Top = 114
+    Width = 75
+    Height = 25
+    Action = actCancelar
+    Caption = 'Cancelar'
+    TabOrder = 4
+  end
+  object actlstLogin: TActionList
+    Images = MainForm.ImageList1
+    Left = 120
+    Top = 32
+    object actLogin: TAction
+      Caption = 'Login'
+      ImageIndex = 10
+      OnExecute = actLoginExecute
+    end
+    object actCancelar: TAction
+      Caption = 'Cancelar'
+      ImageIndex = 5
+    end
+  end
+end

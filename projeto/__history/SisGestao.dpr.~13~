@@ -1,0 +1,17 @@
+program SisGestao;
+
+uses
+  Forms,
+  Main in 'Main.pas' {MainForm},
+  uBaseForm in '..\unit\Base\uBaseForm.pas' {frmBase},
+  uCadProd in '..\unit\Produtos\uCadProd.pas' {frmCadProd},
+  uDados in '..\unit\Dados\uDados.pas' {dm: TDataModule};
+
+{$R *.RES}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(Tdm, dm);
+  Application.CreateForm(TMainForm, MainForm);
+  Application.Run;
+end.

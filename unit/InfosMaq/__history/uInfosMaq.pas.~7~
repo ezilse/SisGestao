@@ -1,0 +1,35 @@
+unit uInfosMaq;
+
+interface
+
+uses
+  IdBaseComponent, IdComponent, IdIPWatch, System.SysUtils, Winapi.Windows;
+
+  function getIpMaquina:String;
+  function getNomeMaquina:String;
+
+implementation
+
+function getIpMaquina:String;
+var
+  pegaIp:TIdIPWatch;
+begin
+  pegaIp  :=  TIdIPWatch.Create(nil);
+  Result  :=  ' IP: ' + pegaIp.LocalIP;
+  FreeAndNil(pegaIp);
+end;
+
+function getNomeMaquina:String;
+var
+  ipBuffer:String;
+  nComp:DWORD;
+begin
+  Result    :=  EmptyStr;
+  nComp     :=  255;
+  SetLength(ipBuffer,nComp);
+  if GetComputerName(PChar(ipBuffer),nComp) then
+    Result  :=  ' NOME DA MAQUINA: ' + ipBuffer;
+  Result  :=  Trim(Result);
+end;
+
+end.

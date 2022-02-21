@@ -1,0 +1,20 @@
+inherited frmCadProd: TfrmCadProd
+  Caption = 'frmCadProd'
+  ClientHeight = 489
+  ClientWidth = 809
+  ExplicitWidth = 825
+  ExplicitHeight = 528
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited pnlBotoes: TPanel
+    Left = 709
+    Height = 489
+    ExplicitLeft = 20
+    ExplicitHeight = 0
+  end
+  inherited actlstProd: TActionList
+    inherited actSalvar: TAction
+      OnExecute = actSalvarExecute
+    end
+  end
+end

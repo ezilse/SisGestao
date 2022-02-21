@@ -1,0 +1,23 @@
+unit uGeral;
+
+interface
+  uses Vcl.Forms, Vcl.ExtCtrls, Vcl.StdCtrls;
+
+  procedure LimparCamposForm(pFormLimpar:TForm);
+
+implementation
+
+procedure LimparCamposForm(pFormLimpar:TForm);
+var
+  x: Integer;
+begin
+  for x := 0 to pFormLimpar.ComponentCount - 1 do
+  begin
+    if (pFormLimpar.Components[x] is TLabeledEdit) then
+      TLabeledEdit(pFormLimpar.Components[x]).Clear
+    else if (pFormLimpar.Components[x] is TCheckBox) then
+      TCheckBox(pFormLimpar.Components[x]).Checked  :=  False;
+  end;
+end;
+
+end.

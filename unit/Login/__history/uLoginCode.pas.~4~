@@ -1,0 +1,39 @@
+unit uLoginCode;
+
+interface
+
+uses
+  Data.DB, ZAbstractRODataset, ZAbstractDataset, ZDataset;
+
+  function TesteLogin(pLogin,pSenha:String):Boolean;
+
+implementation
+
+uses
+  uDados;
+
+function TesteLogin(pLogin,pSenha:String):Boolean;
+var
+  zqLogin:TZQuery;
+  vContaLog:Integer;
+begin
+  zqLogin :=  TZQuery.Create(nil);
+  with zqLogin do
+  begin
+    Connection  :=  dm.conPrin;
+    if Active then
+      Close;
+    SQL.Clear;
+    SQL.Add('SELECT COUNT(*) FROM TB_LOGIN WHERE LOGIN = :LOGIN AND SENHA = CRIPTOGRAFIA(:SENHA)');
+    ParamByName('LOGIN').AsString :=  pLogin;
+    ParamByName('SENHA').AsString :=  pSenha;
+    Open; First; FetchAll;
+    vContaLog :=  Fields[0].AsInteger;
+    if (vContaLog >= 1) then
+    begin
+
+    end;
+  end;
+end;
+
+end.

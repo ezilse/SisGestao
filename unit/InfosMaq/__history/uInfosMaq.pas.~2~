@@ -1,0 +1,10 @@
+unit uInfosMaq;
+
+interface
+
+uses
+  IdBaseComponent, IdComponent, IdIPWatch;
+
+implementation
+
+end.
