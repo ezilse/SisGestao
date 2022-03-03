@@ -13,45 +13,16 @@ type
     MainMenu1: TMainMenu;
     File1: TMenuItem;
     FileNewItem: TMenuItem;
-    FileOpenItem: TMenuItem;
-    FileCloseItem: TMenuItem;
-    Window1: TMenuItem;
-    Help1: TMenuItem;
-    N1: TMenuItem;
-    FileExitItem: TMenuItem;
-    WindowCascadeItem: TMenuItem;
-    WindowTileItem: TMenuItem;
-    WindowArrangeItem: TMenuItem;
-    HelpAboutItem: TMenuItem;
     OpenDialog: TOpenDialog;
-    FileSaveItem: TMenuItem;
-    FileSaveAsItem: TMenuItem;
-    Edit1: TMenuItem;
-    CutItem: TMenuItem;
-    CopyItem: TMenuItem;
-    PasteItem: TMenuItem;
-    WindowMinimizeItem: TMenuItem;
     ActionList1: TActionList;
-    EditCut1: TEditCut;
-    EditCopy1: TEditCopy;
-    EditPaste1: TEditPaste;
     actProdNew: TAction;
-    FileSave1: TAction;
-    FileExit1: TAction;
-    FileOpen1: TAction;
-    FileSaveAs1: TAction;
-    WindowCascade1: TWindowCascade;
-    WindowTileHorizontal1: TWindowTileHorizontal;
-    WindowArrangeAll1: TWindowArrange;
-    WindowMinimizeAll1: TWindowMinimizeAll;
-    HelpAbout1: TAction;
-    FileClose1: TWindowClose;
-    WindowTileVertical1: TWindowTileVertical;
-    WindowTileItem2: TMenuItem;
     ImageList1: TImageList;
     pnlBotoes: TPanel;
     btnCadprod: TSpeedButton;
     pnlDados: TPanel;
+    actCadMarcas: TAction;
+    btnMarcas: TSpeedButton;
+    Marcas1: TMenuItem;
     procedure FileExit1Execute(Sender: TObject);
     procedure FormActivate(Sender: TObject);
     procedure actProdNewExecute(Sender: TObject);
@@ -59,9 +30,10 @@ type
     procedure SetUsuario(pUser:String);
 
     function  getUsuario:String;
+    procedure actCadMarcasExecute(Sender: TObject);
   private
     { Private declarations }
-    procedure CreateMDIChild(const Name: string);
+    procedure CreateMDIChild(const Name: string;pTipoForm:Integer);
   public
     { Public declarations }
   end;
@@ -73,28 +45,43 @@ var
 implementation
 
 uses
-  uCadProd, uLoginForm, uInfosMaq;
+  uCadProd, uLoginForm, uInfosMaq, uBaseForm, uCadMarcas, uDados, uGeral;
 
 {$R *.dfm}
 
-procedure TMainForm.actProdNewExecute(Sender: TObject);
+procedure TMainForm.actCadMarcasExecute(Sender: TObject);
 begin
-  CreateMDIChild('CadProd');
+  CreateMDIChild('Cadastro de marcas',2);
 end;
 
-procedure TMainForm.CreateMDIChild(const Name: string);
-var
-  Child: TfrmCadProd;
+procedure TMainForm.actProdNewExecute(Sender: TObject);
 begin
-  if (not (MainForm.ActiveMDIChild is TfrmCadProd)) then
-  begin
-    Child         :=  TfrmCadProd.Create(Application);
-    Child.Caption :=  Name;
-  end
-  else
-  begin
-    Application.MessageBox('Esta tela já está ativa',
-      PChar(Application.Title), MB_OK + MB_ICONWARNING);
+  CreateMDIChild('Cadastro de produtos',1);
+end;
+
+procedure TMainForm.CreateMDIChild(const Name: string;pTipoForm:Integer);
+begin
+  case pTipoForm of
+    1:begin
+        if (frmCadProd <> nil) then
+        begin
+          Mensagem(5,'Esta tela já está ativa');
+          Abort;
+        end;
+        Application.CreateForm(TfrmCadProd,frmCadProd);
+        frmCadProd.Caption  :=  Name;
+        frmCadProd.Show;
+      end;
+    2:begin
+        if (frmCadMarcas <> nil) then
+        begin
+          Mensagem(5,'Esta tela já está ativa');
+          Abort;
+        end;
+        Application.CreateForm(TfrmCadMarcas,frmCadMarcas);
+        frmCadMarcas.Caption  :=  Name;
+        frmCadMarcas.Show;
+      end;
   end;
 end;
 

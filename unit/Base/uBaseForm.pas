@@ -13,6 +13,8 @@ type
     pnlBotoes: TPanel;
     actSalvar: TAction;
     btnSalvar: TBitBtn;
+    btnNovo: TBitBtn;
+    actNovo: TAction;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }

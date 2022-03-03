@@ -9,7 +9,9 @@ uses
   uLoginCode in '..\unit\Login\uLoginCode.pas',
   uLoginForm in '..\unit\Login\uLoginForm.pas' {frmLogin},
   uInfosMaq in '..\unit\InfosMaq\uInfosMaq.pas',
-  uGeral in '..\unit\Geral\uGeral.pas';
+  uGeral in '..\unit\Geral\uGeral.pas',
+  uCadMarcas in '..\unit\Marcas\uCadMarcas.pas' {frmCadMarcas},
+  uFrameMarcas in '..\unit\Frames\uFrameMarcas.pas' {Frame1: TFrame};
 
 {$R *.RES}
 

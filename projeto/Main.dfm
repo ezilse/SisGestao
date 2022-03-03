@@ -15,7 +15,6 @@ object MainForm: TMainForm
   OldCreateOrder = False
   Position = poDefault
   WindowState = wsMaximized
-  WindowMenu = Window1
   OnActivate = FormActivate
   OnShow = FormShow
   PixelsPerInch = 96
@@ -26,14 +25,28 @@ object MainForm: TMainForm
     Width = 680
     Height = 41
     Align = alTop
+    BevelOuter = bvNone
     TabOrder = 0
     object btnCadprod: TSpeedButton
-      Left = 1
-      Top = 1
+      Left = 0
+      Top = 0
       Width = 75
-      Height = 39
+      Height = 41
       Action = actProdNew
       Align = alLeft
+      ExplicitLeft = 1
+      ExplicitTop = 1
+      ExplicitHeight = 39
+    end
+    object btnMarcas: TSpeedButton
+      Left = 75
+      Top = 0
+      Width = 75
+      Height = 41
+      Action = actCadMarcas
+      Align = alLeft
+      ExplicitLeft = 137
+      ExplicitHeight = 39
     end
   end
   object pnlDados: TPanel
@@ -42,6 +55,7 @@ object MainForm: TMainForm
     Width = 680
     Height = 21
     Align = alBottom
+    BevelOuter = bvNone
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clRed
     Font.Height = -11
@@ -49,74 +63,19 @@ object MainForm: TMainForm
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
-    ExplicitTop = 364
   end
   object MainMenu1: TMainMenu
     Images = ImageList1
     Left = 40
     Top = 200
     object File1: TMenuItem
-      Caption = '&File'
+      Caption = '&Cadastros'
       Hint = 'File related commands'
       object FileNewItem: TMenuItem
         Action = actProdNew
       end
-      object FileOpenItem: TMenuItem
-        Action = FileOpen1
-      end
-      object FileCloseItem: TMenuItem
-        Action = FileClose1
-      end
-      object FileSaveItem: TMenuItem
-        Action = FileSave1
-      end
-      object FileSaveAsItem: TMenuItem
-        Action = FileSaveAs1
-      end
-      object N1: TMenuItem
-        Caption = '-'
-      end
-      object FileExitItem: TMenuItem
-        Action = FileExit1
-      end
-    end
-    object Edit1: TMenuItem
-      Caption = '&Edit'
-      Hint = 'Edit commands'
-      object CutItem: TMenuItem
-        Action = EditCut1
-      end
-      object CopyItem: TMenuItem
-        Action = EditCopy1
-      end
-      object PasteItem: TMenuItem
-        Action = EditPaste1
-      end
-    end
-    object Window1: TMenuItem
-      Caption = '&Window'
-      Hint = 'Window related commands'
-      object WindowCascadeItem: TMenuItem
-        Action = WindowCascade1
-      end
-      object WindowTileItem: TMenuItem
-        Action = WindowTileHorizontal1
-      end
-      object WindowTileItem2: TMenuItem
-        Action = WindowTileVertical1
-      end
-      object WindowMinimizeItem: TMenuItem
-        Action = WindowMinimizeAll1
-      end
-      object WindowArrangeItem: TMenuItem
-        Action = WindowArrangeAll1
-      end
-    end
-    object Help1: TMenuItem
-      Caption = '&Help'
-      Hint = 'Help topics'
-      object HelpAboutItem: TMenuItem
-        Action = HelpAbout1
+      object Marcas1: TMenuItem
+        Action = actCadMarcas
       end
     end
   end
@@ -130,105 +89,26 @@ object MainForm: TMainForm
     Left = 72
     Top = 200
     object actProdNew: TAction
-      Category = 'File'
+      Category = 'Produtos'
       Caption = '&Produtos'
       Hint = 'New|Create a new file'
       ImageIndex = 6
       ShortCut = 16462
       OnExecute = actProdNewExecute
     end
-    object FileOpen1: TAction
-      Category = 'File'
-      Caption = '&Open'
-      Hint = 'Open|Open a file'
-      ImageIndex = 7
-      ShortCut = 16463
-    end
-    object FileClose1: TWindowClose
-      Category = 'File'
-      Caption = '&Close'
-      Hint = 'Close|Close current file'
-    end
-    object FileSave1: TAction
-      Category = 'File'
-      Caption = '&Save'
-      Hint = 'Save|Save current file'
-      ImageIndex = 8
-      ShortCut = 16467
-    end
-    object FileSaveAs1: TAction
-      Category = 'File'
-      Caption = 'Save &As...'
-      Hint = 'Save As|Save current file with different name'
-    end
-    object FileExit1: TAction
-      Category = 'File'
-      Caption = 'E&xit'
-      Hint = 'Exit|Exit application'
-      OnExecute = FileExit1Execute
-    end
-    object EditCut1: TEditCut
-      Category = 'Edit'
-      Caption = 'Cu&t'
-      Hint = 'Cut|Cuts the selection and puts it on the Clipboard'
-      ImageIndex = 0
-      ShortCut = 16472
-    end
-    object EditCopy1: TEditCopy
-      Category = 'Edit'
-      Caption = '&Copy'
-      Hint = 'Copy|Copies the selection and puts it on the Clipboard'
-      ImageIndex = 1
-      ShortCut = 16451
-    end
-    object EditPaste1: TEditPaste
-      Category = 'Edit'
-      Caption = '&Paste'
-      Hint = 'Paste|Inserts Clipboard contents'
-      ImageIndex = 2
-      ShortCut = 16470
-    end
-    object WindowCascade1: TWindowCascade
-      Category = 'Window'
-      Caption = '&Cascade'
-      Hint = 'Cascade'
-      ImageIndex = 17
-    end
-    object WindowTileHorizontal1: TWindowTileHorizontal
-      Category = 'Window'
-      Caption = 'Tile &Horizontally'
-      Hint = 'Tile Horizontally'
-      ImageIndex = 15
-    end
-    object WindowTileVertical1: TWindowTileVertical
-      Category = 'Window'
-      Caption = 'Tile &Vertically'
-      Hint = 'Tile Vertically'
-      ImageIndex = 16
-    end
-    object WindowMinimizeAll1: TWindowMinimizeAll
-      Category = 'Window'
-      Caption = '&Minimize All'
-      Hint = 'Minimize All'
-    end
-    object WindowArrangeAll1: TWindowArrange
-      Category = 'Window'
-      Caption = '&Arrange All'
-      Hint = 'Arrange All'
-    end
-    object HelpAbout1: TAction
-      Category = 'Help'
-      Caption = '&About...'
-      Hint = 
-        'About|Displays program information, version number, and copyrigh' +
-        't'
+    object actCadMarcas: TAction
+      Category = 'Marcas'
+      Caption = 'Marcas'
+      ImageIndex = 10
+      ShortCut = 16461
+      OnExecute = actCadMarcasExecute
     end
   end
   object ImageList1: TImageList
     Left = 104
     Top = 200
     Bitmap = {
-      494C010112001400140010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010112001400200010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000005000000001002000000000000050
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

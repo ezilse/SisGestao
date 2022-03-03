@@ -33,6 +33,9 @@ const
 
 implementation
 
+uses
+  uGeral;
+
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
@@ -68,15 +71,15 @@ begin
       end
       else
       begin
-        Application.MessageBox('O sistema não foi liberado para esta máquina. Por favor, entre em contato com o suporte.',
-          PChar(Application.Title), MB_OK + MB_ICONSTOP);
+        if (MensagemSimNao('O sistema não foi liberado para esta máquina. Deseja configurar?')) then
+          WinExec('GravaRegedit.exe', sw_show);
         Application.Terminate;
       end;
     except
-      Application.MessageBox('Não foi possível conectar ao banco de dados',
-        PChar(Application.Title), MB_OK + MB_ICONSTOP);
+      Mensagem(5,'Não foi possível conectar ao banco de dados');
       Application.Terminate;
     end;
+    FreeAndNil(Registro);
   end;
 end;
 

@@ -25,7 +25,6 @@ object frmBase: TfrmBase
     Align = alRight
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitLeft = 664
     object btnSalvar: TBitBtn
       Left = 0
       Top = 0
@@ -33,11 +32,18 @@ object frmBase: TfrmBase
       Height = 50
       Action = actSalvar
       Align = alTop
-      Caption = 'Salvar'
+      Caption = '&Salvar'
       TabOrder = 0
-      ExplicitLeft = 1
-      ExplicitTop = 1
-      ExplicitWidth = 98
+    end
+    object btnNovo: TBitBtn
+      Left = 0
+      Top = 50
+      Width = 100
+      Height = 50
+      Action = actNovo
+      Align = alTop
+      Caption = '&Novo'
+      TabOrder = 1
     end
   end
   object actlstProd: TActionList
@@ -45,8 +51,12 @@ object frmBase: TfrmBase
     Left = 296
     Top = 216
     object actSalvar: TAction
-      Caption = 'Salvar'
+      Caption = '&Salvar'
       ImageIndex = 8
+    end
+    object actNovo: TAction
+      Caption = '&Novo'
+      ImageIndex = 6
     end
   end
 end
